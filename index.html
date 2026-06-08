@@ -306,15 +306,6 @@
                     <div className="w-full bg-navy border-b border-gold/20 py-5 px-6 mb-8 sticky top-0 z-30 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
                             
-                            {/* Logo 与 标题区域 */}
-                        <div className="flex items-center space-x-4">
-                            {/* 运用 mix-blend-screen 完美去除黑底，并加入 onError 优雅降级 */}
-                            {!logoFailed ? (
-                                <img 
-                                    src="STELLAR CAI LOGO- BRIGHT.png" 
-                                    alt="Stellar Cai Logo" 
-                                    className="h-10 sm:h-12 w-auto object-contain mix-blend-screen" 
-                                    onError={() => setLogoFailed(true)}
                                 />
                             ) : (
                                 /* 预览环境缺少图片时，自动展示精美的 SVG 纯金备用印章 */
