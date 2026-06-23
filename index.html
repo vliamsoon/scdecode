@@ -391,12 +391,12 @@ const App = () => {
             e('div',{className:'hdr-inner'},
                 e('div',{className:'hdr-left'},
                     !imgErr
-                        ? e('img',{src:'STELLAR CAI LOGO- BRIGHT.jpg',alt:'Stellar Cai Logo',
+                        ? e('img',{src:'STELLAR CAI LOGO- BRIGHT.png',alt:'Stellar Cai Logo',
                             style:{height:'4rem',width:'auto',objectFit:'contain',mixBlendMode:'screen'},
                             onError:()=>setImgErr(true)})
                         : e('div',{className:'logo-fb'},
-                            e('span',{className:'logo-char'},'星'),
-                            e('span',{className:'logo-char'},'财')
+                            e('span',{className:'logo-char'},''),
+                            e('span',{className:'logo-char'},'')
                           ),
                     e('h1',{className:'site-title'},t.title)
                 ),
