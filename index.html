@@ -306,17 +306,18 @@ const App = () => {
     const t = i18n[lang];
 
     if(!natal || !cur) {
-        /* Minimal header while no valid DOB */
-        return e('div',{className:'app'},
-            e('div',{className:'hdr'},
-                e('div',{className:'hdr-inner'},
-                    e('div',{className:'hdr-left'},
-                        e('div',{className:'logo-fb'},
-                            e('span',{className:'logo-char'},'星'),
-                            e('span',{className:'logo-char'},'财')
-                        ),
-                        e('h1',{className:'site-title'},t.title)
-                    ),
+         /* Header */
+        e('div',{className:'hdr'},
+            e('div',{className:'hdr-inner'},
+                e('div',{className:'hdr-left'},
+                    !imgErr
+                        ? e('img',{src:'STELLAR CAI LOGO- BRIGHT.png',alt:'Stellar Cai Logo',
+                            style:{height:'4rem',width:'auto',objectFit:'contain',mixBlendMode:'screen'},
+                            onError:()=>setImgErr(true)})
+                        : e('div',{className:'logo-fb'},
+                            e('span',{className:'logo-char'},''),
+                            e('span',{className:'logo-char'},'')
+                          ),
                     e('div',{className:'hdr-right'},
                         e('div',{className:'dob-wrap'},
                             e('span',{className:'dob-lbl'},t.dobLabel),
